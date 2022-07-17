@@ -28,6 +28,15 @@ router.get('/', function(req, res, next) {
   res.status(200).json(products)
 });
 
+
+
+/* POST products listing. 
+router.post('/', function(req, res, next) {
+  console.log(req.body)
+  res.status(201).json(req.body)
+});*/
+
+/**
 router.get('/:id', function(req, res, next){
   console.log(req.params.id)
   const product = 
@@ -37,22 +46,15 @@ router.get('/:id', function(req, res, next){
     price: 5,
   }
   res.status(200).json(product)
-});
+}); */
 
-
-/* POST products listing. */
-router.post('/', function(req, res, next) {
-  console.log(req.body)
-  res.status(201).json(req.body)
-});
-
-/* PUT products listing. */
+/* PUT products listing. 
 router.put('/:id',function(req, res, next){
   console.log(req.body)
   res.status(201).json(req.body)
-});
+});*/
 
-/* DELETE products listing. */
+/* DELETE products listing. 
 router.delete('/:id', function(req, res, next){
  console.log(req.params.id)
  const product = 
@@ -63,5 +65,5 @@ router.delete('/:id', function(req, res, next){
  }
  res.status(201).json({product})
 });
-
+*/
 module.exports = router;
