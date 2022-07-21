@@ -1,35 +1,17 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router(); 
+
+const productController =require('../controllers/productsController');
 
 /* GET products listing. */
-router.get('/categories', function(req, res, next) {
-  res.send('respond with a resource products categories');
-});
-
-router.get('/', function(req, res, next) {
-  console.log(req.query)
-  const products = [
-    {
-      id: 1,
-      name: "product 1",
-      price: 1,
-    },
-    {
-      id: 2,
-      name: "product 2",
-      price: 1,
-    },
-    {
-      id: 3,
-      name: "product 3",
-      price: 3,
-    },
-  ]
-  res.status(200).json(products)
-});
+router.get('/', productController.getAll);
+router.get('/:id', productController.getById);
+router.post('/', productController.create);
+router.put('/:id', productController.update);
+router.delete('/:id', productController.delete);
 
 
-
+module.exports = router;
 /* POST products listing. 
 router.post('/', function(req, res, next) {
   console.log(req.body)
@@ -66,4 +48,4 @@ router.delete('/:id', function(req, res, next){
  res.status(201).json({product})
 });
 */
-module.exports = router;
+
