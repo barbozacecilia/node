@@ -4,7 +4,7 @@ mongose.connect("mongodb://localhost/node-project", function (error){
     if(error){
         throw error
     }else{
-        console.log ()
+        console.log ("Conectado a MongoDb")
     }
 })
 module.exports = mongose

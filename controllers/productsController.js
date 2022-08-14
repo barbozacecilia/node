@@ -26,7 +26,8 @@ module.exports = {
                 name: req.body.name,
                 price: req.body.price,
                 description: req.body.description,
-                quantity: req.body.quantity,
+                category: req.body.category,
+                code: req.body.code,
             })
             const document = await product.save()
             console.log(req.body)
